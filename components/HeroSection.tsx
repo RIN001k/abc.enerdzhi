@@ -12,7 +12,7 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="section-space border-b border-slate-200/60 bg-gradient-to-b from-sky-50/80 via-slate-50 to-slate-50"
+      className="section-space border-b border-slate-200/60 bg-gradient-to-b from-cyan-50 via-amber-50/60 to-sky-50"
     >
       <div className="container-padded grid items-center gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
         <motion.div
