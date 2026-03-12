@@ -52,11 +52,11 @@ export function HeroSection() {
           <dl className="mt-4 grid grid-cols-2 gap-4 max-w-md text-xs sm:text-sm text-slate-600">
             <div>
               <dt className="font-semibold text-slate-900">Вік</dt>
-              <dd>від 5 до 7 років</dd>
+              <dd>від 2 до 7 років</dd>
             </div>
             <div>
               <dt className="font-semibold text-slate-900">Формат</dt>
-              <dd>очні заняття 2–3 рази на тиждень</dd>
+              <dd>очні заняття 2 рази на тиждень</dd>
             </div>
           </dl>
         </motion.div>
