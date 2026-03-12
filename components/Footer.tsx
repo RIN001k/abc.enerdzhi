@@ -1,14 +1,22 @@
 "use client";
 
-import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Instagram,
+  Facebook,
+  Building2,
+  MapPinned,
+} from "lucide-react";
 
 export function Footer() {
   return (
     <footer
       id="contacts"
-      className="border-t border-slate-200 bg-slate-50/90 py-8"
+      className="border-t border-slate-200 bg-gradient-to-t from-sky-50 via-amber-50/70 to-slate-50 py-8"
     >
-      <div className="container-padded grid gap-6 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:items-center">
+      <div className="container-padded grid gap-8 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start">
         <div>
           <h3 className="text-base sm:text-lg font-semibold text-slate-900">
             [Назва твого центру]
@@ -42,6 +50,66 @@ export function Footer() {
           <div className="mt-3 flex items-center gap-2 text-xs sm:text-sm text-slate-700">
             <MapPin className="h-4 w-4 text-brand-blue" />
             <p>м. Ваше місто, вул. Прикладна, буд. 1</p>
+          </div>
+
+          <div className="mt-5 grid gap-3 md:grid-cols-2">
+            <div className="glass-card border-sky-100 bg-white/90 p-4 text-xs sm:text-sm text-slate-700">
+              <div className="mb-2 flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-2xl bg-sky-100 text-sky-700">
+                  <Building2 className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900">
+                    ЗДО №589
+                  </p>
+                  <p className="text-[11px] text-slate-500">
+                    Відкрито для всіх бажаючих
+                  </p>
+                </div>
+              </div>
+              <p>
+                Заняття доступні для дітей з інших садочків. Вхід вільний за
+                попереднім записом.
+              </p>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex items-center gap-1 rounded-full bg-brand-blue/90 px-3 py-1.5 text-[11px] font-semibold text-white shadow-soft transition hover:bg-brand-blue"
+              >
+                <MapPinned className="h-3.5 w-3.5" />
+                Відкрити на карті
+              </a>
+            </div>
+
+            <div className="glass-card border-emerald-100 bg-white/90 p-4 text-xs sm:text-sm text-slate-700">
+              <div className="mb-2 flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700">
+                  <Building2 className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900">
+                    ЗДО №206
+                  </p>
+                  <p className="text-[11px] text-slate-500">
+                    Лише для зарахованих дітей
+                  </p>
+                </div>
+              </div>
+              <p>
+                Заняття проводяться виключно для дітей, які офіційно зараховані
+                до цього закладу.
+              </p>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex items-center gap-1 rounded-full bg-emerald-500 px-3 py-1.5 text-[11px] font-semibold text-white shadow-soft transition hover:bg-emerald-600"
+              >
+                <MapPinned className="h-3.5 w-3.5" />
+                Відкрити на карті
+              </a>
+            </div>
           </div>
         </div>
 
