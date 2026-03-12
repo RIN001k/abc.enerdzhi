@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+.container-padded {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.glass-card {
+  @apply rounded-3xl bg-white/80 backdrop-blur-md shadow-soft border border-white/60;
+}
+
+.section-space {
+  @apply py-12 sm:py-16 lg:py-20;
+}
+
+.section-title {
+  @apply text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-900;
+}
+
+.section-subtitle {
+  @apply mt-3 text-sm sm:text-base text-slate-600 max-w-2xl;
+}
+
