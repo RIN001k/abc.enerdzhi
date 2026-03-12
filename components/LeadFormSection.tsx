@@ -101,7 +101,7 @@ export function LeadFormSection() {
                   <p className="font-semibold text-slate-900">
                     Віддаєте перевагу дзвінку?
                   </p>
-                  <p>+38 (099) 123-45-67 — адміністратор центру</p>
+                  <p>+380 97 220 39 09 — адміністратор центру</p>
                 </div>
               </div>
             </div>
