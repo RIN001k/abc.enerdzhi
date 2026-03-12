@@ -33,7 +33,7 @@ export function Footer() {
                 href="tel:+380991234567"
                 className="hover:text-brand-blue hover:underline"
               >
-                +38 (099) 123-45-67
+                +380 97 220 39 09
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -49,7 +49,7 @@ export function Footer() {
 
           <div className="mt-3 flex items-center gap-2 text-xs sm:text-sm text-slate-700">
             <MapPin className="h-4 w-4 text-brand-blue" />
-            <p>м. Ваше місто, вул. Прикладна, буд. 1</p>
+            <p>м. Київ</p>
           </div>
 
           <div className="mt-5 grid gap-3 md:grid-cols-2">
