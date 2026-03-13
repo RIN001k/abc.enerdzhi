@@ -7,7 +7,6 @@ import {
   Instagram,
   Facebook,
   Building2,
-  MapPinned,
 } from "lucide-react";
 
 export function Footer() {
@@ -19,7 +18,7 @@ export function Footer() {
       <div className="container-padded grid gap-8 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start">
         <div>
           <h3 className="text-base sm:text-lg font-semibold text-slate-900">
-            [Назва твого центру]
+            АБС ЕНЕРДЖІ
           </h3>
           <p className="mt-1 text-xs sm:text-sm text-slate-600">
             Центр дбайливої підготовки дітей до школи. Створюємо простір, у
@@ -68,17 +67,18 @@ export function Footer() {
                 </div>
               </div>
               <p>
-                Заняття доступні для дітей з інших садочків. Вхід вільний за
-                попереднім записом.
+                Адреса: вулиця Левка Лук&apos;яненка, 3Б, Київ, 04212. Заняття
+                відкриті для всіх бажаючих, у тому числі для дітей з інших
+                садочків.
               </p>
               <a
-                href="https://maps.google.com"
+                href="https://maps.app.goo.gl/LExTd32YvsSRj3o78"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 inline-flex items-center gap-1 rounded-full bg-brand-blue/90 px-3 py-1.5 text-[11px] font-semibold text-white shadow-soft transition hover:bg-brand-blue"
               >
-                <MapPinned className="h-3.5 w-3.5" />
-                Відкрити на карті
+                <MapPin className="h-3.5 w-3.5" />
+                Відкрити карту
               </a>
             </div>
 
@@ -97,17 +97,18 @@ export function Footer() {
                 </div>
               </div>
               <p>
-                Заняття проводяться виключно для дітей, які офіційно зараховані
-                до цього закладу.
+                Адреса: вулиця Степана Олійника, 10, Київ. Увага: заняття
+                проводяться лише для дітей, які офіційно зараховані до цього
+                садочка.
               </p>
               <a
-                href="https://maps.google.com"
+                href="https://maps.app.goo.gl/Vq8XU7vBv5j8z7G2A"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 inline-flex items-center gap-1 rounded-full bg-emerald-500 px-3 py-1.5 text-[11px] font-semibold text-white shadow-soft transition hover:bg-emerald-600"
               >
-                <MapPinned className="h-3.5 w-3.5" />
-                Відкрити на карті
+                <MapPin className="h-3.5 w-3.5" />
+                Відкрити карту
               </a>
             </div>
           </div>
@@ -135,8 +136,8 @@ export function Footer() {
               </a>
             </div>
           </div>
-          <p className="text-[11px] text-slate-500">
-            © {new Date().getFullYear()} [Назва твого центру]. Усі права
+            <p className="text-[11px] text-slate-500">
+            © {new Date().getFullYear()} АБС ЕНЕРДЖІ. Усі права
             захищені.
           </p>
         </div>
