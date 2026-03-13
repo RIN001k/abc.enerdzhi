@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -26,12 +27,18 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-slate-50/80 backdrop-blur-md">
       <div className="container-padded flex items-center justify-between py-3 sm:py-4">
         <Link href="#top" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-tr from-brand-blue to-brand-mint shadow-soft">
-            <span className="text-xl font-bold text-white">А</span>
+          <div className="relative h-10 w-10 overflow-hidden rounded-2xl bg-gradient-to-tr from-brand-blue to-brand-mint shadow-soft">
+            <Image
+              src="/logo-abs-enerdji.png"
+              alt="АБС ЕНЕРДЖІ — логотип центру"
+              fill
+              sizes="40px"
+              className="object-contain p-1"
+            />
           </div>
           <div className="flex flex-col leading-tight">
             <span className="text-sm font-semibold text-slate-900">
-              [Назва твого центру]
+              АБС ЕНЕРДЖІ
             </span>
             <span className="text-xs text-slate-500">
               центр підготовки до школи
