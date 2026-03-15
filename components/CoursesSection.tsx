@@ -63,6 +63,7 @@ const courses: Course[] = [
       "розвиток логічного та образного мислення",
       "формування навчальної мотивації та самостійності",
       "адаптація до шкільного режиму та правил",
+      "вартість: 2 500 грн / місяць",
     ],
   },
 ];
@@ -167,8 +168,15 @@ export function CoursesSection() {
                 <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500/80" />
                 <span>
                   <span className="font-semibold">Окремий блок</span> (будь-який
-                  один напрямок, включно з підготовкою до школи) —{" "}
+                  один напрямок, окрім підготовки до школи) —{" "}
                   <span className="font-semibold">1 500 грн / місяць</span>.
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500/80" />
+                <span>
+                  <span className="font-semibold">Підготовка до школи</span> —{" "}
+                  <span className="font-semibold">2 500 грн / місяць</span>.
                 </span>
               </li>
               <li className="flex gap-2">
