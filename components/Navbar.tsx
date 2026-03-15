@@ -29,11 +29,11 @@ export function Navbar() {
         <Link href="#top" className="flex items-center gap-2">
           <div className="relative h-10 w-10 overflow-hidden rounded-2xl bg-gradient-to-tr from-brand-blue to-brand-mint shadow-soft">
             <Image
-              src="/logo-abs-enerdji.png"
+              src="/logo.png"
               alt="АБС ЕНЕРДЖІ — логотип центру"
-              fill
-              sizes="40px"
-              className="object-contain p-1"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain p-1"
             />
           </div>
           <div className="flex flex-col leading-tight">
