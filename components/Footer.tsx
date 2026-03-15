@@ -32,16 +32,16 @@ export function Footer() {
                 href="tel:+380991234567"
                 className="hover:text-brand-blue hover:underline"
               >
-                +380 97 220 39 09
+                +380 73 773 16 16
               </a>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-brand-blue" />
               <a
-                href="mailto:info@school-center.ru"
+                href="mailto:abc-enerdgy@ukr.net"
                 className="hover:text-brand-blue hover:underline"
               >
-                info@school-center.ru
+                abc-enerdgy@ukr.net
               </a>
             </div>
           </div>
@@ -97,12 +97,12 @@ export function Footer() {
                 </div>
               </div>
               <p>
-                Адреса: вулиця Степана Олійника, 10, Київ. Увага: заняття
+                Адреса: вулиця Полярна, 13А, Київ, 02000. Увага: заняття
                 проводяться лише для дітей, які офіційно зараховані до цього
                 садочка.
               </p>
               <a
-                href="https://maps.app.goo.gl/Vq8XU7vBv5j8z7G2A"
+                href="https://maps.app.goo.gl/TjeXPCEDQ6AevgRe9"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 inline-flex items-center gap-1 rounded-full bg-emerald-500 px-3 py-1.5 text-[11px] font-semibold text-white shadow-soft transition hover:bg-emerald-600"
