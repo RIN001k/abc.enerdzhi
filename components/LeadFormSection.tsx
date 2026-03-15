@@ -211,8 +211,8 @@ export function LeadFormSection() {
                   onChange={handleChange}
                   className="w-full rounded-2xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-sky-100 placeholder:text-slate-400 focus:border-brand-blue focus:ring-2"
                   placeholder="Наприклад, 6"
-                  min={4}
-                  max={9}
+                  min={2}
+                  max={7}
                 />
                 {errors.age && (
                   <p className="mt-1 text-xs text-red-500">
