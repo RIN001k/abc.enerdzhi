@@ -22,6 +22,8 @@ export function LeadFormSection() {
   const [values, setValues] = useState<FormValues>(initialValues);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validate = (data: FormValues): FormErrors => {
     const newErrors: FormErrors = {};
@@ -55,16 +57,46 @@ export function LeadFormSection() {
     setValues((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: undefined }));
     setSubmitted(false);
+    setSubmitError(null);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
     const validationErrors = validate(values);
     setErrors(validationErrors);
 
-    if (Object.keys(validationErrors).length === 0) {
+    if (Object.keys(validationErrors).length > 0) {
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      setSubmitError(null);
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data: { success?: boolean; error?: string } = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || "Помилка відправки форми.");
+      }
+
+      setValues(initialValues);
       setSubmitted(true);
-      // Здесь можно отправить данные на сервер или в мессенджер
+    } catch (error) {
+      console.error(error);
+      setSubmitError("Помилка, спробуйте пізніше.");
+      setSubmitted(false);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -191,15 +223,20 @@ export function LeadFormSection() {
 
               <button
                 type="submit"
-                className="mt-2 w-full rounded-full bg-brand-blue px-4 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-blue/90"
+                disabled={isSubmitting}
+                className="mt-2 w-full rounded-full bg-brand-blue px-4 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-blue/90 disabled:cursor-not-allowed disabled:bg-brand-blue/70"
               >
-                Надіслати заявку
+                {isSubmitting ? "Відправлення..." : "Надіслати заявку"}
               </button>
 
               {submitted && (
                 <p className="text-xs text-emerald-600">
-                  Дякуємо! Ми отримали вашу заявку й незабаром звʼяжемося з вами.
+                  Дякуємо! Ваша заявка отримана, ми скоро з вами звʼяжемося.
                 </p>
+              )}
+
+              {submitError && (
+                <p className="text-xs text-red-600">{submitError}</p>
               )}
 
               <p className="text-[11px] text-slate-500">
