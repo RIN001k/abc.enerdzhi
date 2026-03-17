@@ -36,13 +36,6 @@ export default function RootLayout({
             }}
           />
           <div
-            className="hidden xl:block absolute top-[60%] right-[20%] h-64 w-64 bg-no-repeat bg-contain opacity-24"
-            style={{
-              backgroundImage: "url('/schur.png')",
-              transform: "rotate(-5deg) scale(1.1)",
-            }}
-          />
-          <div
             className="hidden 2xl:block absolute top-[30%] left-[40%] h-56 w-56 bg-no-repeat bg-contain opacity-18"
             style={{
               backgroundImage: "url('/makvin.png')",
