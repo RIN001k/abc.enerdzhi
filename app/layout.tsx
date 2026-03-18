@@ -62,7 +62,7 @@ export default function RootLayout({
             className="hidden md:block absolute bottom-[8%] right-[18%] h-44 w-44 bg-no-repeat bg-contain opacity-18"
             style={{
               backgroundImage: "url('/schur.png')",
-              transform: "rotate(-4deg) scale(0.95)",
+              transform: "rotate(-4deg) scale(1.1)",
             }}
           />
 
