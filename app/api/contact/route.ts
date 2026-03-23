@@ -48,7 +48,7 @@ export async function POST(request: Request) {
     `;
 
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "ABC Enerdgy <info@abcenerdgy.com>",
       to: "abc-enerdgy@ukr.net",
       subject: "Нова заявка з форми на сайті",
       html,
