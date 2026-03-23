@@ -150,43 +150,17 @@ export function CoursesSection() {
             </p>
           </div>
           <div>
-            <h3 className="text-sm sm:text-base font-semibold text-slate-900">
-              Оплата
-            </h3>
-            <ul className="mt-2 space-y-2 text-xs sm:text-sm text-slate-600">
-              <li className="flex gap-2">
-                <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500/80" />
-                <span>
-                  <span className="font-semibold">
-                    Комплексний абонемент
-                  </span>{" "}
-                  (Англійська мова + Нейророзвиток) —{" "}
-                  <span className="font-semibold">2 500 грн / місяць</span>.
-                </span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500/80" />
-                <span>
-                  <span className="font-semibold">Окремий блок</span> (будь-який
-                  один напрямок, окрім підготовки до школи) —{" "}
-                  <span className="font-semibold">1 500 грн / місяць</span>.
-                </span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500/80" />
-                <span>
-                  <span className="font-semibold">Підготовка до школи</span> —{" "}
-                  <span className="font-semibold">2 500 грн / місяць</span>.
-                </span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500/80" />
-                <span>
-                  Деталі оплати та наявність місць у групах можна уточнити у
-                  адміністратора центру.
-                </span>
-              </li>
-            </ul>
+          <h3 className="font-semibold text-slate-900">
+  Оплата
+</h3>
+<ul className="mt-2 space-y-2 text-xs sm:text-sm text-slate-600">
+  <li className="flex gap-2">
+    <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-emerald-500/80" />
+    <span>
+      Деталі оплати та наявність місць у групах можна уточнити у адміністратора центру.
+    </span>
+  </li>
+</ul>
           </div>
         </motion.div>
       </div>
