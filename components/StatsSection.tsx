@@ -16,7 +16,7 @@ const stats = [
   },
   {
     label: "дітей у групі — максимум",
-    value: "8",
+    value: "10",
     icon: Sparkles,
   },
 ];
