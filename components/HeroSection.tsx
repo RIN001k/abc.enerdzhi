@@ -94,7 +94,7 @@ export function HeroSection() {
                   <p className="text-xs font-semibold text-slate-900">
                     Малі групи
                   </p>
-                  <p>до 10дітей</p>
+                  <p>до 10 дітей</p>
                 </div>
                 <div className="rounded-2xl bg-white px-3 py-2 shadow-sm">
                   <p className="text-xs font-semibold text-slate-900">
