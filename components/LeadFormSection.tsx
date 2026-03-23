@@ -231,7 +231,7 @@ export function LeadFormSection() {
 
               {submitted && (
                 <p className="text-xs text-emerald-600">
-                  Дякуємо! Ваша заявка отримана, ми скоро з вами звʼяжемося.
+                  Заявка отримана!
                 </p>
               )}
 
