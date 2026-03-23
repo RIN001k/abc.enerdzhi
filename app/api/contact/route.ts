@@ -26,17 +26,36 @@ export async function POST(request: Request) {
       );
     }
 
+    const html = `
+      <div style="font-family: Arial, sans-serif; color: #1f2937; line-height: 1.6;">
+        <h2 style="margin: 0 0 12px; color: #0f172a;">Нова заявка з сайту</h2>
+        <p style="margin: 0 0 16px;">Отримано нову заявку з контактної форми.</p>
+        <table cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 520px;">
+          <tr>
+            <td style="padding: 10px 12px; border: 1px solid #e5e7eb; background: #f8fafc; font-weight: 600;">Ім'я батьків</td>
+            <td style="padding: 10px 12px; border: 1px solid #e5e7eb;">${name}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 12px; border: 1px solid #e5e7eb; background: #f8fafc; font-weight: 600;">Телефон</td>
+            <td style="padding: 10px 12px; border: 1px solid #e5e7eb;">${phone}</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px 12px; border: 1px solid #e5e7eb; background: #f8fafc; font-weight: 600;">Вік дитини</td>
+            <td style="padding: 10px 12px; border: 1px solid #e5e7eb;">${age}</td>
+          </tr>
+        </table>
+      </div>
+    `;
+
     await resend.emails.send({
-      from: "АБС ЕНЕРДЖІ <no-reply@resend.dev>",
-      to: ["abc-enerdgy@ukr.net"],
+      from: "onboarding@resend.dev",
+      to: "abc-enerdgy@ukr.net",
       subject: "Нова заявка з форми на сайті",
-      text: `Нова заявка з форми зворотного звʼязку:
-
-Імʼя: ${name}
+      html,
+      text: `Нова заявка з форми:
+Ім'я батьків: ${name}
 Телефон: ${phone}
-Вік дитини: ${age}
-
-Будь ласка, звʼяжіться з батьками для уточнення деталей.`,
+Вік дитини: ${age}`,
     });
 
     return NextResponse.json({ success: true });
